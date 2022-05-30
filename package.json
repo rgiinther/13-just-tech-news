@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
+  "dependencies": {
+    "bcrypt": "^5.0.1"
+=======
   "name": "13-just-tech-news",
   "version": "1.0.0",
   "description": "Module 13 Class work",
@@ -22,5 +26,6 @@
     "express": "^4.18.1",
     "mysql2": "^2.3.3",
     "sequelize": "^6.20.0"
+>>>>>>> develop
   }
 }
