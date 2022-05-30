@@ -1,5 +1,9 @@
 const router = require('express').Router();
+<<<<<<< HEAD
 const { User } = require('../../models');
+=======
+const { User, Post, Vote } = require('../../models');
+>>>>>>> develop
 
 // get all users
 router.get('/', (req, res) => {
@@ -18,7 +22,23 @@ router.get('/:id', (req, res) => {
     attributes: { exclude: ['password'] },
     where: {
       id: req.params.id
+<<<<<<< HEAD
     }
+=======
+    },
+    include: [
+      {
+        model: Post,
+        attributes: ['id', 'title', 'post_url', 'created_at']
+      },
+      {
+        model: Post,
+        attributes: ['title'],
+        through: Vote,
+        as: 'voted_posts'
+      }
+    ]
+>>>>>>> develop
   })
     .then(dbUserData => {
       if (!dbUserData) {
